@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Print</title>
+		<link rel="stylesheet" href="../css/Header_Footer.css">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+			form label{
+				float:left;
+			}
+			form input{
+				float:right;
+			}
+			@media screen {
+				.page-break{
+					float:left;
+					width:50%;
+				}
+			}
+			@media print{
+				#top,#footer{
+					display: none;
+				}
+				.page-break {
+					display: block; 
+					page-break-before: always;
+					color:black; 
+					width:70%;
+				}
+				
+			}
+			
+			
+		</style>
+	</head>
+
+<body>
+		
+		<!--page header-->
+		<div id = "top">
+			<div id="header">
+
+				<a href="index.html" id="logo"><img src = "../images/blackredlogo.png" alt="logo" id="logoimg"></a>
+				<a href="index.html" id="title"><h1>City Grand Cinema</h1></a>
+			</div>
+		<!--navigation button-->
+			<div id="nav">
+				<ul>
+					<li><a href="index.html" ><span>HOME</span></a></li>
+					<li><a href="now_showing.html">NOW SHOWING</a></li>
+					<li><a href="ticket.html">TICKET</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--page content-->
+		<div id="content">
+			<form class="page-break" id="first">
+				<fieldset>
+					<label>Cinema:</label>  
+					<input type="text" value="Kowloon Tong" readonly><br><br>
+					<label>Movie:</label>  
+					<input type="text" value="Barbeque" readonly><br><br>
+					<label>Date Time:</label>  
+					<input type="text" value="Sun, 11 October - 7:00PM" readonly><br><br>
+					<label>House No:</label>  
+					<input type="text" value="1" readonly><br><br>
+					<label>Seat:</label>  
+					<input type="text" value="A1,A2,A3,A4" readonly><br>
+				</fieldset>
+			</form>
+			<form class="page-break" id="second">
+				<fieldset>
+					<label>Cinema:</label>  
+					<input type="text" value="Causeway Bay" readonly><br><br>
+					<label>Movie:</label>  
+					<input type="text" value="Casablanca" readonly><br><br>
+					<label>Date Time:</label>  
+					<input type="text" value="Sun, 11 October - 5:00PM" readonly><br><br>
+					<label>House No:</label>  
+					<input type="text" value="6" readonly><br><br>
+					<label>Seat:</label>  
+					<input type="text" value="A3,A4" readonly><br>
+				</fieldset>
+			</form>
+			
+			
+		
+		</div>
+		<!--page footer-->
+		<div id="footer">	
+			<hr>
+	 		<p>© City Corporation Limited 2020. All rights reserved. |&nbsp;<a href="index.html">Home</a>&nbsp;|&nbsp;<a href="design.html">Design</a></p>
+		</div>
+		
+	
+	<script>
+		
+		let url = new URL(window.location.href);
+		
+		let cinema = url.searchParams.get('cinema');
+		let movie_title = url.searchParams.get('movie_title');
+		let time = url.searchParams.get('time');
+		let theater = url.searchParams.get('house');
+		let seats = url.searchParams.get('seat').split(',');
+		
+		document.getElementById("content").innerHTML = "";
+		
+		for (var i = 0; i < seats.length; i++){
+			
+			document.getElementById("content").innerHTML += '<form class="page-break" id="'+i+'"></form>';
+			document.getElementById(i).innerHTML += '<fieldset id="f'+i+'"></fieldset';
+			document.getElementById('f'+i).innerHTML += '<label>Cinema:</label>  <input type="text" value="'+cinema+'" readonly><br><br>';
+			document.getElementById('f'+i).innerHTML += '<label>Movie:</label>  <input type="text" value="'+movie_title+'" readonly><br><br>';
+			document.getElementById('f'+i).innerHTML += '<label>Date Time:</label> <input type="text" value="'+time+'" readonly><br><br>';
+			document.getElementById('f'+i).innerHTML += '<label>House No:</label>  <input type="text" value="'+theater+'" readonly><br><br>';
+			document.getElementById('f'+i).innerHTML += '<label>Seat:</label>  <input type="text" value="'+seats[i]+'" readonly><br>';
+		}
+	</script>
+	</body>
+</html>

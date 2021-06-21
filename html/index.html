@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<title>CGC</title>
+		<link rel="stylesheet" href="../css/Header_Footer.css">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+			#featured{
+				float:left;
+				width:100%;
+				height:100%;
+				
+			}
+			#featured_content{
+				float:left;
+				width:18%;
+				height:100%;
+			}
+			#featured_video{
+				float:left;
+				width:80%;
+			}
+			#fmovie{
+				width:100%;
+			}
+			#now_showing, #Up_Coming{
+				float:left;
+				width:50%;
+			}
+			#featuredthumbnail{
+				height: 6rem;
+				cursor: pointer;
+			}
+			.thumbnail{
+				height: 6rem;
+				cursor: pointer;
+				float:left;
+			}
+			.category, dt{
+				font-weight: bold;
+				margin-left: 5px;
+				
+			}
+			h2{
+				font-family:'Gordita Black';
+			
+			}
+			dt img{
+				float:left;
+			}
+		</style>
+		
+		<script src="../js/movies.js"></script>
+	</head>
+
+	<body >
+		<!--page header-->
+		<div id = "top">
+			<div id="header">
+
+				<a href="index.html" id="logo" class="not-active"><img src = "../images/blackredlogo.png" alt="logo" id="logoimg"></a>
+				<a href="index.html" id="title" class="not-active"><h1>City Grand Cinema</h1></a>
+				
+			</div>
+		<!--navigation button-->
+			<div id="nav">
+				<ul>
+					<li><a href="index.html" class="not-active"><span>HOME</span></a></li>
+					<li><a href="now_showing.html">NOW SHOWING</a></li>
+					<li><a href="ticket.html">TICKET</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--page content-->
+		<div id="content">
+			<!--featured movie-->
+			<div id="featured">
+				<div id="featured_content">
+				<br><br><br>
+				<h2>Seat Back.</h2>
+				
+				<h2>Enjoy.</h2>
+					
+				<h2>Relax.</h2>
+				
+				</div>
+				
+				<div id="featured_video">
+				<video autoplay controls loop id="fmovie">
+					<source src="https://courses.cs.cityu.edu.hk/cs2204/video/barbecue.ogg" type="video/ogg">
+					<source src="https://courses.cs.cityu.edu.hk/cs2204/video/barbecue.mp4" type="video/mp4">
+					<p>Your browser does not support the video format.</p>
+				</video>
+				</div>
+			</div>
+			<hr>
+			<!--nowshowing-->
+			<div id="now_showing">
+			<h2>Now Showing.</h2>
+			<dl id="present">
+			<dt><p>Name    : Bigbuck</p></dt> 
+   			<dt><img src="../images/bigbuck.jpg" alt="bigbuck thumbnail" class="thumbnail"></dt>
+				<dd><p><span class="category">Cast    :</span> Patrick, Gary</p></dd>
+				<dd><p><span class="category">Director:</span> Sandy</p></dd>
+				<dd><p><span class="category">Duration:</span> 90 Minutes</p></dd>
+			
+			<dt><p>Name    : Casablanca</p></dt> 
+			<dt><img src="../images/casablanca.png" alt="casablanca thumbnail" class="thumbnail"></dt>
+				<dd><p><span class="category">Cast    :</span> Jonathan, Melissa</p></dd>
+				<dd><p><span class="category">Director:</span> Allan</p></dd>
+				<dd><p><span class="category">Duration:</span> 140 Minutes</p></dd>
+			
+			<dt><p>Name    : Chocolate</p></dt> 
+			<dt><img src="../images/chocolate.jpg" alt="chocolate thumbnail" class="thumbnail"></dt>
+				<dd><p><span class="category">Cast    :</span> Andrea, Alvyn</p></dd>
+				<dd><p><span class="category">Director:</span> Niken</p></dd>
+				<dd><p><span class="category">Duration:</span> 100 Minutes</p></dd>
+			</dl>
+			</div>
+			<!--upcoming movies-->
+			<div id="Up_Coming">
+			<h2>Coming Soon.</h2>
+			<dl id="future">
+			<dt><p>Name    : Wildlife</p> </dt>
+   			<dt><img src="../images/wildlife.jpg" alt="wildlife thumbnail" class="thumbnail"></dt>
+				<dd><p><span class="category">Cast    :</span> Tom, Jerry</p></dd>
+				<dd><p><span class="category">Director:</span> Phineas</p></dd>
+				<dd><p><span class="category">Duration:</span> 110 Minutes</p></dd>
+			
+			<dt><p>Name    : Wonders</p> </dt>	
+			<dt><img src="../images/wonders.jpg" alt="wonders thumbnail" class="thumbnail"></dt>
+				<dd><p><span class="category">Cast    :</span> Ferb, Candice</p></dd>
+				<dd><p><span class="category">Director:</span> Steve</p></dd>
+				<dd><p><span class="category">Duration:</span> 80 Minutes</p></dd>
+			
+  			<dt><p>Name    : Nature</p> </dt>			
+			<dt><img src="../images/nature.jpg" alt="nature thumbnail" class="thumbnail"></dt>
+				<dd><p><span class="category">Cast    :</span> Winston, Theo</p></dd>
+				<dd><p><span class="category">Director:</span> Kenneth</p></dd>
+				<dd><p><span class="category">Duration:</span> 120 Minutes</p></dd>	 
+			</dl>
+			</div>
+		
+		<!--page footer-->
+		<div id="footer">
+			<hr>
+	 		<p>© City Corporation Limited 2020. All rights reserved. |&nbsp;
+			<a href="index.html" class="not-active">Home</a>&nbsp;|&nbsp;<a href="design.html">Design</a></p>
+		</div>
+		</div>	
+	
+	<script>
+		
+		document.getElementById("present").innerHTML=""
+		document.getElementById("future").innerHTML=""
+		
+		let movies=getMovies();
+		var videoSource = new Array();
+
+	
+		for (let i=0; i<movies.length; i++) {
+					if (movies[i].type == "now"){
+						document.getElementById("present").innerHTML+= `<dt><p>Name    : `+movies[i].name+`</p> </dt>			
+																		<dt><img src="../images/`+movies[i].thumbnail+`" alt="`+movies[i].name+` thumbnail" class="thumbnail"></dt>
+																		<dd><p><span class="category">Cast    :</span> `+movies[i].cast+`</p></dd>
+																		<dd><p><span class="category">Director:</span> `+movies[i].director+`</p></dd>
+																		<dd><p><span class="category">Duration:</span> `+movies[i].duration+` Minutes</p></dd>	`
+						videoSource[i]=movies[i].src;
+					}
+					else{
+						document.getElementById("future").innerHTML+= `<dt><p>Name    : `+movies[i].name+`</p> </dt>			
+																		<dt><img src="../images/`+movies[i].thumbnail+`" alt="`+movies[i].name+` thumbnail" class="thumbnail"></dt>
+																		<dd><p><span class="category">Cast    :</span> `+movies[i].cast+`</p></dd>
+																		<dd><p><span class="category">Director:</span> `+movies[i].director+`</p></dd>
+																		<dd><p><span class="category">Duration:</span> `+movies[i].duration+` Minutes</p></dd>	`
+						
+						videoSource[i]=movies[i].src;
+					}
+				}
+		
+		var videoCount = videoSource.length;
+		var z = 0;
+		
+		document.getElementById('featured_video').innerHTML=
+				`<video autoplay controls id="fmovie" onended="myHandler()">
+					<source src="`+videoSource[0]+`" type="video/mp4">
+					<p>Your browser does not support the video format.</p>
+				</video>`
+		fmovie.load();
+		
+		function videoPlay(videoNum)
+		{
+			document.getElementById('featured_video').innerHTML=
+				`<video autoplay controls id="fmovie" onended="myHandler()">
+					<source src="`+videoSource[videoNum]+`" type="video/mp4">
+					<p>Your browser does not support the video format.</p>
+				</video>`
+			fmovie.load();
+		}
+		
+		function myHandler() {
+			setTimeout(function() {			
+				z++;
+				if(z >= (videoCount)){
+					z = 0;
+					videoPlay(z);
+				}
+				else{
+					videoPlay(z);
+				}
+			}, 2000);
+		}
+		
+//		function nextVid() {
+
+//		}
+
+		
+		
+		//play video based on thumbnail
+		function getMoviesSrc(alt){
+			for (let i=0; i<movies.length; i++) {
+				if (alt == movies[i].name + " thumbnail"){
+					return movies[i].src
+				}
+			}
+		}
+		
+		
+		var thumbnail = document.getElementsByClassName("thumbnail")
+		for (var i = 0; i < thumbnail.length; i++){
+			thumbnail[i].onclick = function(){
+				document.getElementById('featured_video').innerHTML=
+				`<video autoplay controls id="fmovie" onended="myHandler()">
+					<source src="`+getMoviesSrc(this.alt)+`" type="video/mp4">
+					<p>Your browser does not support the video format.</p>
+				</video>`
+				fmovie.load();
+				z = videoSource.indexOf(getMoviesSrc(this.alt))
+			};
+		}
+	
+	
+	</script>
+	</body>
+</html>
