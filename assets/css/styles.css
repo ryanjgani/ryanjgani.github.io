@@ -762,6 +762,7 @@ footer {
 
 button {
     font-family: var(--body-font);
+    border: none;
 }
 
 
