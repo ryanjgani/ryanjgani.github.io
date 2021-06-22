@@ -403,6 +403,7 @@ footer {
 .button--white {
     background-color: #FFF;
     color: var(--first-color);
+    font-weight: var(--font-medium);
 }
 
 .button--white:hover {
@@ -430,8 +431,8 @@ footer {
 }
 
 .about__info {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: var(--mb-2-5);
 }
 
@@ -456,7 +457,7 @@ footer {
 }
 
 .about__buttons {
-    display: flex;
+    align-self: center;
     justify-content: center;
 }
 
@@ -553,11 +554,19 @@ footer {
 }
 
 .skills__python {
-    width: 80%;
+    width: 75%;
 }
 
-.skills__tensorflow {
-    width: 30%;
+.skills__webscraping {
+    width: 60%;
+}
+
+.skills__dataengineering {
+    width: 60%;
+}
+
+.skills__analytics {
+    width: 60%;
 }
 
 .skills__cpp {
@@ -747,7 +756,7 @@ footer {
 }
 
 .project__img {
-    width: 232px;
+    width: 450px;
     justify-self: center;
 }
 
