@@ -1,294 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="google-site-verification"
+            content="CTFRpvKhZCJWU6DtXGiBaXz5U56ZuVmgDhOOWDU2-1Q"
+        />
+        <meta
+            name="google-site-verification"
+            content="0gQUl4GyfkT3pP76-ABz04Cbb1ncHGnp353robufcbE"
+        />
+        <!--==================== UNICONS ====================-->
+        <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="CTFRpvKhZCJWU6DtXGiBaXz5U56ZuVmgDhOOWDU2-1Q" />
-    <meta name="google-site-verification" content="0gQUl4GyfkT3pP76-ABz04Cbb1ncHGnp353robufcbE" />
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <!--==================== FONTAWESOME ====================-->
+        <script
+            src="https://kit.fontawesome.com/4b83d34916.js"
+            crossorigin="anonymous"
+        ></script>
 
-    <!--==================== FONTAWESOME ====================-->
-    <script src="https://kit.fontawesome.com/4b83d34916.js" crossorigin="anonymous"></script>
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="assets\css\swiper-bundle.min.css" />
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets\css\swiper-bundle.min.css">
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="assets\css\styles.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <title>Ryan's Portfolio</title>
+    </head>
 
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets\css\styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
-    <title>Ryan's Portfolio</title>
-</head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Ryan</a>
 
-<body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Ryan</a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i>
+                                Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i>
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i>
+                                Contact Me
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link ">
-                            <i class="uil uil-user nav__icon"></i> About
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i> Skills
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Portfolio
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contact Me
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-            </div>
-
-            <!-- <div class="nav__btns">
+                <!-- <div class="nav__btns">
                 <i class="uil uil-moon change-theme" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                 </div>
             </div> -->
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a
+                                href="https://www.linkedin.com/in/ryan-gani/"
+                                target="_blank"
+                                class="home__social-icon"
+                            >
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a
+                                href="https://www.github.com/ryanjgani"
+                                target="_blank"
+                                class="home__social-icon"
+                            >
+                                <i class="uil uil-github"></i>
+                            </a>
+                        </div>
 
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/ryan-gani/" target='_blank' class="home__social-icon">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-                        <a href="https://www.github.com/ryanjgani" target='_blank' class="home__social-icon">
-                            <i class="uil uil-github"></i>
-                        </a>
-                    </div>
-
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                        <div class="home__img">
+                            <svg
+                                class="home__blob"
+                                viewBox="0 0 200 187"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                                <mask id="mask0" mask-type="alpha">
+                                    <path
+                                        d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
                                 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
                                 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                                    />
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path
+                                        d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
                                 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                <image class="home__blob-img" x='0' y='-25' xlink:href="assets/img/perfil.jpeg"/>
-                            </g>
-                        </svg>
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                                    />
+                                    <image
+                                        class="home__blob-img"
+                                        x="0"
+                                        y="-25"
+                                        xlink:href="assets/img/perfil.jpeg"
+                                    />
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="home__data">
+                            <h1 class="home__title">Hi, I'm Ryan</h1>
+                            <h3 class="home__subtitle">Software Engineer</h3>
+                            <p class="home__description">
+                                Combining
+                                <span><strong>data engineering</strong></span>
+                                with
+                                <span
+                                    ><strong>software development</strong></span
+                                >
+                                to create interactive web applications and IT
+                                solutions
+                            </p>
+                            <a href="#contact" class="button button--flex">
+                                Contact Me
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="home__data">
-                        <h1 class="home__title">Hi, I'm Ryan</h1>
-                        <h3 class="home__subtitle">Software Engineer</h3>
-                        <p class="home__description">Combining <span><strong>data engineering</strong></span> with <span><strong>software development</strong></span> to create interactive web applications and IT solutions</p>
-                        <a href="#contact" class="button button--flex">
-                            Contact Me <i class="uil uil-message button__icon"></i>
+                    <div class="home__scroll">
+                        <a
+                            href="#about"
+                            class="home__scroll-button button--flex"
+                        >
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll down</span>
+                            <i
+                                class="uil uil-arrow-down home__scroll-arrow"
+                            ></i>
                         </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll down</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <h2 class="section__title">About Me</h2>
 
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
-            <h2 class="section__title">About Me</h2>
-
-            <div class="about__container container">
-                <div class="about__data">
-                    <p class="about__description p_work">An Enthusiastic <span><strong> Software Engineer </strong></span>🚀 having an experience of building Web applications with JavaScript / ReactJS / NodeJS and some other libraries and frameworks</p>
-                </div>
-            </div>
-        </section>
-        
-        <!--==================== TECH STACKS ====================-->
-        <section class="about section" id="skills">
-            <h2 class="section__title">Favorite Stacks 🍔</h2>
-
-            <div class="about__container container p_work">
-                <div class="about__data">
-                    <p class="about__description">Here are some of my favorite tech stacks. Always open to learning more languages, libraries, or frameworks!</p>
-                </div>
-            </div>
-            <div class="stack-container p_work">
-                <div class="about__info">
-                    <div class="stack-div">
-                        <i class="fab fa-html5"></i>
-                        <span class="about__info-name">HTML-5</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fab fa-css3-alt"></i>
-                        <span class="about__info-name">CSS3</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fab fa-js"></i>
-                        <span class="about__info-name">JavaScript ES6</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fab fa-react"></i>
-                        <span class="about__info-name">React JS</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fab fa-node"></i>
-                        <span class="about__info-name">Node JS</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fab fa-npm"></i>
-                        <span class="about__info-name">npm</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fas fa-database"></i>
-                        <span class="about__info-name">Mongo DB</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fab fa-aws"></i>
-                        <span class="about__info-name">AWS</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fas fa-fire"></i>
-                        <span class="about__info-name">Firebase</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fab fa-python"></i>
-                        <span class="about__info-name">Python</span>
-                    </div>
-                    <div class="stack-div">
-                        <i class="fas fa-laptop-code"></i>
-                        <span class="about__info-name">C++</span>
+                <div class="about__container container">
+                    <div class="about__data">
+                        <p class="about__description p_work">
+                            An Enthusiastic
+                            <span><strong> Software Engineer </strong></span>🚀
+                            having an experience of building Web applications
+                            with JavaScript / ReactJS / NodeJS and some other
+                            libraries and frameworks
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!--==================== QUALIFICATION ====================-->
-        <section class="qualification section">
-            <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">My Personal Journey</span>
+            <!--==================== TECH STACKS ====================-->
+            <section class="about section" id="skills">
+                <h2 class="section__title">Favorite Stacks 🍔</h2>
 
-            <div class="qualification__container container">
-                <div class="education">
-                    <div class="qualification__button button--flex">
-                        <i class="uil uil-graduation-cap qualification__icon"></i> &nbsp; Education
+                <div class="about__container container p_work">
+                    <div class="about__data">
+                        <p class="about__description">
+                            Here are some of my favorite tech stacks. Always
+                            open to learning more languages, libraries, or
+                            frameworks!
+                        </p>
                     </div>
-                    <div class="contact__content_work">
-                        <h3 class="">Data and Systems Engineering</h3>
-                        <span class="qualification__subtitle">City University of Hong Kong - Bachelor of Engineering</span>
-                        <div class="qualification__calendar">
-                            <i class="uil uil-calendar-alt"></i> August 2020 - May 2024
+                </div>
+                <div class="stack-container p_work">
+                    <div class="about__info">
+                        <div class="stack-div">
+                            <i class="fab fa-html5"></i>
+                            <span class="about__info-name">HTML-5</span>
                         </div>
-                        <p class="p_work">Top Scholarship for International Students Awardee</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="qualification__button button--flex work_icon">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i> Work Experience
-                    </div>
-                    <div class="contact__content_work">
-                        <h3 class="work_title">Product/Software Engineer at uHey Limited</h3>
-                        <div class="qualification__calendar">
-                            <i class="uil uil-calendar-alt"></i> June 2021 - Present
+                        <div class="stack-div">
+                            <i class="fab fa-css3-alt"></i>
+                            <span class="about__info-name">CSS3</span>
                         </div>
-                        <ul>
-                            <li>Responsible for developing an inventory management app built for internal use.</li>
-                            <li>Handled the project requirement gathering, system solution analysis, and development process.</li>
-                            <li>Implemented various AWS services such as S3, API Gateway, CloudFormation, CloudFront, and
-                                Lambda for serverless cloud deployment</li>
-                        </ul>
-                        <div class="p_work">
-                            <a href="https://www.trailme.com.hk/">Visit Website</a>
+                        <div class="stack-div">
+                            <i class="fab fa-js"></i>
+                            <span class="about__info-name">JavaScript ES6</span>
+                        </div>
+                        <div class="stack-div">
+                            <i class="fab fa-react"></i>
+                            <span class="about__info-name">React JS</span>
+                        </div>
+                        <div class="stack-div">
+                            <i class="fab fa-node"></i>
+                            <span class="about__info-name">Node JS</span>
+                        </div>
+                        <div class="stack-div">
+                            <i class="fab fa-npm"></i>
+                            <span class="about__info-name">npm</span>
+                        </div>
+                        <div class="stack-div">
+                            <i class="fas fa-database"></i>
+                            <span class="about__info-name">Mongo DB</span>
+                        </div>
+                        <div class="stack-div">
+                            <i class="fab fa-aws"></i>
+                            <span class="about__info-name">AWS</span>
+                        </div>
+                        <div class="stack-div">
+                            <i class="fas fa-fire"></i>
+                            <span class="about__info-name">Firebase</span>
+                        </div>
+                        <div class="stack-div">
+                            <i class="fab fa-python"></i>
+                            <span class="about__info-name">Python</span>
+                        </div>
+                        <div class="stack-div">
+                            <i class="fas fa-laptop-code"></i>
+                            <span class="about__info-name">C++</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section">
+                <h2 class="section__title">Qualification</h2>
+                <span class="section__subtitle">My Personal Journey</span>
 
+                <div class="qualification__container container">
+                    <div class="education">
+                        <div class="qualification__button button--flex">
+                            <i
+                                class="uil uil-graduation-cap qualification__icon"
+                            ></i>
+                            &nbsp; Education
+                        </div>
+                        <div class="contact__content_work">
+                            <h3 class="">Data and Systems Engineering</h3>
+                            <span class="qualification__subtitle"
+                                >City University of Hong Kong - Bachelor of
+                                Engineering</span
+                            >
+                            <div class="qualification__calendar">
+                                <i class="uil uil-calendar-alt"></i> August 2020
+                                - May 2024
+                            </div>
+                            <p class="p_work">
+                                Top Scholarship for International Students
+                                Awardee
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div
+                            class="qualification__button button--flex work_icon"
+                        >
+                            <i
+                                class="uil uil-briefcase-alt qualification__icon"
+                            ></i>
+                            Work Experience
+                        </div>
+                        <div class="contact__content_work">
+                            <h3 class="work_title">
+                                Product/Software Engineer at uHey Limited
+                            </h3>
+                            <div class="qualification__calendar">
+                                <i class="uil uil-calendar-alt"></i> June 2021 -
+                                Present
+                            </div>
+                            <ul>
+                                <li>
+                                    Responsible for developing an inventory
+                                    management app built for internal use.
+                                </li>
+                                <li>
+                                    Handled the project requirement gathering,
+                                    system solution analysis, and development
+                                    process.
+                                </li>
+                                <li>
+                                    Implemented various AWS services such as S3,
+                                    API Gateway, CloudFormation, CloudFront, and
+                                    Lambda for serverless cloud deployment
+                                </li>
+                            </ul>
+                            <div class="p_work">
+                                <a href="https://www.trailme.com.hk/"
+                                    >Visit Website</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!--==================== PORTFOLIO ====================-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title">Portfolio</h2>
+                <span class="section__subtitle">Recent Works</span>
 
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle">Recent Works</span>
-
-            <div class="portfolio__container container">
+                <div class="portfolio__container container">
                     <!--==================== PORTFOLIO  1====================-->
                     <div class="portfolio__content port1 grid">
-
                         <div class="portfolio__data contact__content_work">
                             <h3 class="portfolio__title">Health App</h3>
-                            <p class="portfolio__description">A Hospital Information/Management System App used for doctors, hospital administration, and patients</p>
-                            <a href="https://pure-atoll-92801.herokuapp.com/" class="button button--flex button--small portfolio__button">
+                            <p class="portfolio__description">
+                                A Hospital Information/Management System App
+                                used for doctors, hospital administration, and
+                                patients
+                            </p>
+                            <a
+                                href="https://pure-atoll-92801.herokuapp.com/"
+                                class="button button--flex button--small portfolio__button"
+                            >
                                 Demo
                                 <i class="uil uil-arrow-right"></i>
                             </a>
                             <div class="p_work">
-                                <a href="https://github.com/ryanjgani/HealthApp">GitHub Repo <i class="fab fa-github"></i></a>
+                                <a href="https://github.com/ryanjgani/HealthApp"
+                                    >GitHub Repo <i class="fab fa-github"></i
+                                ></a>
                             </div>
                         </div>
-                        <img src="assets/img/homepage.png" alt="" class="portfolio__img">
-
+                        <img
+                            src="assets/img/homepage.png"
+                            alt=""
+                            class="portfolio__img"
+                        />
                     </div>
                     <!--==================== PORTFOLIO  2 ====================-->
                     <div class="portfolio__content grid">
                         <div class="portfolio__data contact__content_work">
                             <h3 class="portfolio__title">TRAILME</h3>
-                            <p class="portfolio__description">As a Software Engineer Intern at uHey Limited</p>
-                            <p class="portfolio__description">An Inventory Management App build for internal use</p>
+                            <p class="portfolio__description">
+                                As a Software Engineer Intern at uHey Limited
+                            </p>
+                            <p class="portfolio__description">
+                                An Inventory Management App build for internal
+                                use
+                            </p>
                             <ul>
-                                <li>Tech stack including JavaScript, HTML/CSS, Node.js, Express</li>
+                                <li>
+                                    Tech stack including JavaScript, HTML/CSS,
+                                    Node.js, Express
+                                </li>
                                 <li>Deployed serverless on AWS</li>
                             </ul>
                         </div>
-                        <img src="assets/img/trailme_tm.png" alt="" class="portfolio__img">
-
-                        
+                        <img
+                            src="assets/img/trailme_tm.png"
+                            alt=""
+                            class="portfolio__img"
+                        />
                     </div>
-            </div>
-        </section>
+                </div>
+            </section>
 
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Let's Connect</h2>
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact">
+                <h2 class="section__title">Let's Connect</h2>
 
-            <div class="contact__container container grid">
+                <div class="contact__container container grid">
                     <div class="contact__information">
                         <i class="uil uil-phone contact__icon"></i>
 
                         <div>
                             <h3 class="contact__title">Phone</h3>
-                            <span class="contact__subtitle">(+852) 5964-7954</span>
+                            <span class="contact__subtitle"
+                                >(+852) 5964-7954</span
+                            >
                         </div>
                     </div>
 
@@ -297,30 +407,27 @@
 
                         <div>
                             <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">ryanjgani@gmail.com</span>
+                            <span class="contact__subtitle"
+                                >ryanjgani@gmail.com</span
+                            >
                         </div>
                     </div>
+                </div>
+            </section>
+        </main>
 
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <p class="footer__copy">Made with ❤️ by Ryan Gani &#169; 2022</p>
+        </footer>
 
-            </div>
-        </section>
-    </main>
+        <!--==================== SCROLL TOP ====================-->
 
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        
-            <p class="footer__copy">Made with ❤️ by Ryan Gani &#169; 2021</p>
+        <a href="#home" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
 
-    </footer>
-
-    <!--==================== SCROLL TOP ====================-->
-
-    <a href="#home" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
-
-    <!--==================== MAIN JS ====================-->
-    <script src="assets\js\main.js"></script>
-</body>
-
+        <!--==================== MAIN JS ====================-->
+        <script src="assets\js\main.js"></script>
+    </body>
 </html>
