@@ -1,147 +1,146 @@
-/*==================== MENU SHOW Y HIDDEN ====================*/
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+(function () {
+    "use strict";
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    })
-}
-
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    })
-}
-
-/*==================== REMOVE MENU MOBILE ====================*/
-
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-        // clicking nav__link will remove the show menu class
-    navMenu.classList.remove('show-menu')
-}
-
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-    skillsHeader = document.querySelectorAll('.skills__header')
-
-function toggleSkills() {
-    let itemClass = this.parentNode.className
-
-    // for (i = 0; i < skillsContent.length; i++) {
-    //     skillsContent[i].className = 'skills__content skills__close'
-    // }
-    if (itemClass === 'skills__content skills__close') {
-        this.parentNode.className = 'skills__content skills__open'
-    } else if (itemClass === 'skills__content skills__open') {
-        this.parentNode.className = 'skills__content skills__close'
-    }
-}
-
-skillsHeader.forEach((el) => {
-    el.addEventListener('click',
-        toggleSkills)
-})
-
-
-/*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper('.portfolio__container', {
-    cssMode: true,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-
-    },
-    mousewheel: true,
-    keyboard: true,
-});
-
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+    /**
+     * Easy selector helper function
+     */
+    const select = (el, all = false) => {
+        el = el.trim();
+        if (all) {
+            return [...document.querySelectorAll(el)];
         } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            return document.querySelector(el);
         }
-    })
-}
+    };
 
-window.addEventListener('scroll', scrollActive)
+    /**
+     * Easy event listener function
+     */
+    const on = (type, el, listener, all = false) => {
+        let selectEl = select(el, all);
+        if (selectEl) {
+            if (all) {
+                selectEl.forEach((e) => e.addEventListener(type, listener));
+            } else {
+                selectEl.addEventListener(type, listener);
+            }
+        }
+    };
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/
+    /**
+     * Easy on scroll event listener
+     */
+    const onscroll = (el, listener) => {
+        el.addEventListener("scroll", listener);
+    };
 
-function scrollHeader() {
-    const nav = document.getElementById('header')
-        // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if (this.scrollY >= 80) nav.classList.add('scroll-header');
-    else nav.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+    /**
+     * Scrolls to an element with header offset
+     */
+    const scrollto = (el) => {
+        let elementPos = select(el).offsetTop;
+        window.scrollTo({
+            top: elementPos,
+            behavior: "smooth",
+        });
+    };
 
-/*==================== SHOW SCROLL UP ====================*/
+    /**
+     * Back to top button
+     */
+    let backtotop = select(".back-to-top");
+    if (backtotop) {
+        const toggleBacktotop = () => {
+            if (window.scrollY > 100) {
+                backtotop.classList.add("active");
+            } else {
+                backtotop.classList.remove("active");
+            }
+        };
+        window.addEventListener("load", toggleBacktotop);
+        onscroll(document, toggleBacktotop);
+    }
 
-function scrollUp() {
-    const scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if (this.scrollY >= 560) scrollUp.classList.add('show-scroll');
-    else scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+    /**
+     * Scrool with ofset on links with a class name .scrollto
+     */
+    on(
+        "click",
+        ".scrollto",
+        function (e) {
+            if (select(this.hash)) {
+                e.preventDefault();
 
+                let body = select("body");
+                if (body.classList.contains("mobile-nav-active")) {
+                    body.classList.remove("mobile-nav-active");
+                    let navbarToggle = select(".mobile-nav-toggle");
+                    navbarToggle.classList.toggle("bi-list");
+                    navbarToggle.classList.toggle("bi-x");
+                }
+                scrollto(this.hash);
+            }
+        },
+        true
+    );
 
+    /**
+     * Scroll with ofset on page load with hash links in the url
+     */
+    window.addEventListener("load", () => {
+        if (window.location.hash) {
+            if (select(window.location.hash)) {
+                scrollto(window.location.hash);
+            }
+        }
+    });
 
-/*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
+    /**
+     * Preloader
+     */
+    let preloader = select("#preloader");
+    if (preloader) {
+        window.addEventListener("load", () => {
+            preloader.remove();
+        });
+    }
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+    /**
+     * Skills animation
+     */
+    let skilsContent = select(".skills-content");
+    if (skilsContent) {
+        new Waypoint({
+            element: skilsContent,
+            offset: "80%",
+            handler: function (direction) {
+                let progress = select(".progress .progress-bar", true);
+                progress.forEach((el) => {
+                    el.style.width = el.getAttribute("aria-valuenow") + "%";
+                });
+            },
+        });
+    }
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+    const clipboard = new ClipboardJS(".tippytool");
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
+    /**
+     * Animation on scroll
+     */
+    window.addEventListener("load", () => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+            mirror: false,
+        });
+    });
 
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-        // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
+    tippy(".tippytool", {
+        content: "click to copy email address",
+    });
+    tippy(".tippytool", {
+        content: "copied!",
+        trigger: "click",
+    });
+})();

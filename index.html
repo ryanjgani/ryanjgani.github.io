@@ -1,433 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="google-site-verification"
-            content="CTFRpvKhZCJWU6DtXGiBaXz5U56ZuVmgDhOOWDU2-1Q"
-        />
-        <meta
-            name="google-site-verification"
-            content="0gQUl4GyfkT3pP76-ABz04Cbb1ncHGnp353robufcbE"
-        />
-        <!--==================== UNICONS ====================-->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <title>Ryan Gani</title>
+        <meta content="" name="description" />
+        <meta content="" name="keywords" />
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.ico" rel="icon" />
+
+        <!-- Google Fonts -->
         <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
             rel="stylesheet"
-            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
         />
 
-        <!--==================== FONTAWESOME ====================-->
+        <!-- External CSS Files -->
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
         <script
-            src="https://kit.fontawesome.com/4b83d34916.js"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"
         ></script>
+        <link
+            href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
 
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="assets\css\swiper-bundle.min.css" />
-
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="assets\css\styles.css" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <title>Ryan's Portfolio</title>
+        <!-- Main CSS File -->
+        <link href="assets/css/styles.css" rel="stylesheet" />
     </head>
 
     <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">Ryan</a>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Home
-                            </a>
+        <!-- ======= Mobile nav toggle button ======= -->
+        <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+        <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+        <!-- ======= Header ======= -->
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light pt-2">
+            <div class="container-sm">
+                <div></div>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="#"
+                                >Home</a
+                            >
                         </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> About
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume">About</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i>
-                                Skills
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i>
-                                Portfolio
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i>
-                                Contact Me
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
                         </li>
                     </ul>
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
                 </div>
+            </div>
+        </nav>
 
-                <!-- <div class="nav__btns">
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div> -->
-            </nav>
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a
-                                href="https://www.linkedin.com/in/ryan-gani/"
-                                target="_blank"
-                                class="home__social-icon"
-                            >
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                            <a
-                                href="https://www.github.com/ryanjgani"
-                                target="_blank"
-                                class="home__social-icon"
-                            >
-                                <i class="uil uil-github"></i>
-                            </a>
-                        </div>
-
-                        <div class="home__img">
-                            <svg
-                                class="home__blob"
-                                viewBox="0 0 200 187"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                            >
-                                <mask id="mask0" mask-type="alpha">
-                                    <path
-                                        d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-                                    />
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path
-                                        d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-                                    />
-                                    <image
-                                        class="home__blob-img"
-                                        x="0"
-                                        y="-25"
-                                        xlink:href="assets/img/perfil.jpeg"
-                                    />
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="home__data">
-                            <h1 class="home__title">Hi, I'm Ryan</h1>
-                            <h3 class="home__subtitle">Software Engineer</h3>
-                            <p class="home__description">
-                                Combining
-                                <span><strong>data engineering</strong></span>
-                                with
-                                <span
-                                    ><strong>software development</strong></span
-                                >
-                                to create interactive web applications and IT
-                                solutions
-                            </p>
-                            <a href="#contact" class="button button--flex">
-                                Contact Me
-                                <i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="home__scroll">
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex flex-column justify-content-center">
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+                <h1>Ryan Gani</h1>
+                <p class="mb-4">
+                    Software Engineer | Data Analytics | Cloud <br />
+                </p>
+                <span class="education">Data Engineering @ CityU HK</span>
+                <div
+                    class="mt-5 d-flex flex-row justify-content-center justify-content-lg-start"
+                >
+                    <div class="me-3">
                         <a
-                            href="#about"
-                            class="home__scroll-button button--flex"
+                            href="#"
+                            class="tippytool d-flex align-items-center"
+                            data-clipboard-text="ryanjgani@gmail.com"
+                            ><i class="bx bxl-gmail"></i
+                            ><span class="p-links ms-1">
+                                ryanjgani@gmail.com</span
+                            ></a
                         >
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Scroll down</span>
-                            <i
-                                class="uil uil-arrow-down home__scroll-arrow"
-                            ></i>
-                        </a>
                     </div>
-                </div>
-            </section>
-
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                <h2 class="section__title">About Me</h2>
-
-                <div class="about__container container">
-                    <div class="about__data">
-                        <p class="about__description p_work">
-                            An Enthusiastic
-                            <span><strong> Software Engineer </strong></span>🚀
-                            having an experience of building Web applications
-                            with JavaScript / ReactJS / NodeJS and some other
-                            libraries and frameworks
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== TECH STACKS ====================-->
-            <section class="about section" id="skills">
-                <h2 class="section__title">Favorite Stacks 🍔</h2>
-
-                <div class="about__container container p_work">
-                    <div class="about__data">
-                        <p class="about__description">
-                            Here are some of my favorite tech stacks. Always
-                            open to learning more languages, libraries, or
-                            frameworks!
-                        </p>
-                    </div>
-                </div>
-                <div class="stack-container p_work">
-                    <div class="about__info">
-                        <div class="stack-div">
-                            <i class="fab fa-html5"></i>
-                            <span class="about__info-name">HTML-5</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fab fa-css3-alt"></i>
-                            <span class="about__info-name">CSS3</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fab fa-js"></i>
-                            <span class="about__info-name">JavaScript ES6</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fab fa-react"></i>
-                            <span class="about__info-name">React JS</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fab fa-node"></i>
-                            <span class="about__info-name">Node JS</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fab fa-npm"></i>
-                            <span class="about__info-name">npm</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fas fa-database"></i>
-                            <span class="about__info-name">Mongo DB</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fab fa-aws"></i>
-                            <span class="about__info-name">AWS</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fas fa-fire"></i>
-                            <span class="about__info-name">Firebase</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fab fa-python"></i>
-                            <span class="about__info-name">Python</span>
-                        </div>
-                        <div class="stack-div">
-                            <i class="fas fa-laptop-code"></i>
-                            <span class="about__info-name">C++</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
-                <h2 class="section__title">Qualification</h2>
-                <span class="section__subtitle">My Personal Journey</span>
-
-                <div class="qualification__container container">
-                    <div class="education">
-                        <div class="qualification__button button--flex">
-                            <i
-                                class="uil uil-graduation-cap qualification__icon"
-                            ></i>
-                            &nbsp; Education
-                        </div>
-                        <div class="contact__content_work">
-                            <h3 class="">Data and Systems Engineering</h3>
-                            <span class="qualification__subtitle"
-                                >City University of Hong Kong - Bachelor of
-                                Engineering</span
-                            >
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i> August 2020
-                                - May 2024
-                            </div>
-                            <p class="p_work">
-                                Top Scholarship for International Students
-                                Awardee
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div
-                            class="qualification__button button--flex work_icon"
+                    <div class="me-3">
+                        <a
+                            href="https://github.com/ryanjgani"
+                            class="d-flex align-items-center"
+                            ><i class="bx bxl-github"></i
+                            ><span class="ms-1 p-links">ryanjgani</span></a
                         >
-                            <i
-                                class="uil uil-briefcase-alt qualification__icon"
-                            ></i>
-                            Work Experience
-                        </div>
-                        <div class="contact__content_work">
-                            <h3 class="work_title">
-                                Software Engineer Intern at uHey Limited
-                            </h3>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i> June 2021 -
-                                Present
+                    </div>
+
+                    <a
+                        href="https://www.linkedin.com/in/ryanjgani/"
+                        class="d-flex align-items-center"
+                        ><i class="bx bxl-linkedin"></i
+                        ><span class="p-links ms-1">Ryan Gani</span></a
+                    >
+                </div>
+            </div>
+        </section>
+        <!-- End Hero -->
+
+        <main id="main mx-auto">
+            <!-- ======= Resume Section ======= -->
+            <section id="resume" class="resume mx-auto">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                        <h2>About</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3 class="resume-title">Sumary</h3>
+                            <div class="resume-item pb-0">
+                                <h4>Ryan Gani</h4>
+                                <p>
+                                    <em
+                                        >Indonesian-native student with a
+                                        passion for technology and people</em
+                                    >
+                                </p>
                             </div>
-                            <ul>
-                                <li>
-                                    Responsible for developing an inventory
-                                    management app built for internal use.
-                                </li>
-                                <li>
-                                    Handled the project requirement gathering,
-                                    system solution analysis, and development
-                                    process.
-                                </li>
-                                <li>
-                                    Implemented various AWS services such as S3,
-                                    API Gateway, CloudFormation, CloudFront, and
-                                    Lambda for serverless cloud deployment
-                                </li>
-                            </ul>
-                            <div class="p_work">
-                                <a href="https://www.trailme.com.hk/"
-                                    >Visit Website</a
+
+                            <h3 class="resume-title">Education</h3>
+                            <div class="resume-item">
+                                <h4>Data &amp; Systems Engineering</h4>
+                                <h5>2020 - 2024</h5>
+                                <p>
+                                    <em>City University of Hong Kong, HK</em>
+                                </p>
+                                <p>
+                                    <span class="fw-bold"
+                                        >Bachelor of Engineering</span
+                                    >
+                                    <br />
+                                    School of Data Science<br />
+                                    <br />
+                                    Top Scholarship for International Students
+                                    Award (2020 - 2024)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3 class="resume-title">Experience</h3>
+                            <div class="resume-item">
+                                <h4>Software Engineer Intern</h4>
+                                <h5>Jun 2021 - Jan 2022</h5>
+                                <p>
+                                    <em>TRAILME - uHey Limited, HK</em>
+                                </p>
+                                <ul>
+                                    <li>
+                                        Launched the first release of TRAILME
+                                        TM, inventory management full stack
+                                        application built for internal use.
+                                    </li>
+                                    <li>
+                                        Drove an upgrade and migration of the
+                                        inventory data from spreadsheet to a
+                                        NoSQL database using MongoDB and
+                                        connected the database to a Node.js
+                                        backend via Mongoose.
+                                    </li>
+                                    <li>
+                                        Developed the front-end part of the
+                                        application using JQuery and Bootstrap,
+                                        and the back-end using Node.js and
+                                        Express, in an MVC
+                                        (Model-View-Controller) software design
+                                        pattern. Implemented user authentication
+                                        using OAuth and JWT.n
+                                    </li>
+                                    <li>
+                                        Created a serverless architecture for
+                                        the application using the Serverless
+                                        framework by using AWS API Gateway to
+                                        trigger the execution of Lambda
+                                        functions directly in response to an
+                                        HTTP request. Integrate the serverless
+                                        application with Amazon CloudFront that
+                                        acts as a CDN to accelerate the website
+                                        load times.
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="resume-title">Leadership</h3>
+                            <div class="resume-item">
+                                <h4>Executive Committee</h4>
+                                <h5>Nov 2020 - Present</h5>
+                                <p>
+                                    <em
+                                        >Indonesian Students' Association in
+                                        Hong Kong</em
+                                    >
+                                </p>
+                                <ul>
+                                    <li>
+                                        Work in a team of 6 in the Youth and
+                                        Sports division on coordinating various
+                                        competitive sports events and educative
+                                        webinars.
+                                    </li>
+                                    <li>
+                                        Plan and organize innovative events to
+                                        encourage bonding among Indonesian
+                                        students in Hong Kong such as the
+                                        Indonesian Independence Day Celebration.
+                                    </li>
+                                </ul>
+                                <a
+                                    href="https://www.ppihongkong.org/"
+                                    target="_blank"
+                                    ><i
+                                        class="bx bxs-right-top-arrow-circle"
+                                    ></i>
+                                    Website</a
                                 >
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- End Resume Section -->
 
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-                <h2 class="section__title">Portfolio</h2>
-                <span class="section__subtitle">Recent Works</span>
+            <!-- ======= Services Section ======= -->
+            <section id="projects" class="services">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                        <h2>Personal Projects</h2>
+                        <p>Showcase of my previous works</p>
+                    </div>
 
-                <div class="portfolio__container container">
-                    <!--==================== PORTFOLIO  1====================-->
-                    <div class="portfolio__content port1 grid">
-                        <div class="portfolio__data contact__content_work">
-                            <h3 class="portfolio__title">Health App</h3>
-                            <p class="portfolio__description">
-                                A Hospital Information/Management System App
-                                used for doctors, hospital administration, and
-                                patients
-                            </p>
-                            <a
-                                href="https://pure-atoll-92801.herokuapp.com/"
-                                class="button button--flex button--small portfolio__button"
-                            >
-                                Demo
-                                <i class="uil uil-arrow-right"></i>
-                            </a>
-                            <div class="p_work">
-                                <a href="https://github.com/ryanjgani/HealthApp"
-                                    >GitHub Repo <i class="fab fa-github"></i
-                                ></a>
+                    <div class="row">
+                        <div
+                            class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+                            data-aos="zoom-in"
+                            data-aos-delay="200"
+                        >
+                            <div class="card border-0 icon-box">
+                                <img
+                                    src="assets/img/healthproject.png"
+                                    class="card-img-top"
+                                    alt="healthproject"
+                                />
+                                <div class="card-body">
+                                    <h4
+                                        class="card-title yellow-background d-inline-block"
+                                    >
+                                        Health
+                                    </h4>
+                                    <p class="card-text">
+                                        A Hospital Information/Management System
+                                        App used for doctors, hospital
+                                        administration, and patients
+                                    </p>
+                                    <div class="my-4">
+                                        <button class="btn btn-blue">
+                                            More Info
+                                        </button>
+                                        <a
+                                            href="https://pure-atoll-92801.herokuapp.com/"
+                                            target="_blank"
+                                            class="btn btn-blue"
+                                            >Demo</a
+                                        >
+                                    </div>
+                                    <a
+                                        href="https://github.com/ryanjgani/HealthApp"
+                                        target="_blank"
+                                        ><i
+                                            class="bx bxl-github"
+                                            style="font-size: 20px"
+                                        ></i>
+                                        Github Link</a
+                                    >
+                                </div>
                             </div>
                         </div>
-                        <img
-                            src="assets/img/homepage.png"
-                            alt=""
-                            class="portfolio__img"
-                        />
-                    </div>
-                    <!--==================== PORTFOLIO  2 ====================-->
-                    <div class="portfolio__content grid">
-                        <div class="portfolio__data contact__content_work">
-                            <h3 class="portfolio__title">TRAILME</h3>
-                            <p class="portfolio__description">
-                                As a Software Engineer Intern at uHey Limited
-                            </p>
-                            <p class="portfolio__description">
-                                An Inventory Management App build for internal
-                                use
-                            </p>
-                            <ul>
-                                <li>
-                                    Tech stack including JavaScript, HTML/CSS,
-                                    Node.js, Express
-                                </li>
-                                <li>Deployed serverless on AWS</li>
-                            </ul>
-                        </div>
-                        <img
-                            src="assets/img/trailme_tm.png"
-                            alt=""
-                            class="portfolio__img"
-                        />
-                    </div>
-                </div>
-            </section>
 
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
-                <h2 class="section__title">Let's Connect</h2>
-
-                <div class="contact__container container grid">
-                    <div class="contact__information">
-                        <i class="uil uil-phone contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Phone</h3>
-                            <span class="contact__subtitle"
-                                >(+852) 5964-7954</span
-                            >
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle"
-                                >ryanjgani@gmail.com</span
-                            >
+                        <div
+                            class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+                            data-aos="zoom-in"
+                            data-aos-delay="200"
+                        >
+                            <div class="card border-0 icon-box">
+                                <img
+                                    src="assets/img/fraud_detection.jpg"
+                                    class="card-img-top"
+                                    alt="healthproject"
+                                />
+                                <div class="card-body">
+                                    <h4
+                                        class="card-title yellow-background d-inline-block"
+                                    >
+                                        Fraud Detection
+                                    </h4>
+                                    <p class="card-text">
+                                        SDSC 2001 Python for Data Science <br />
+                                        Final course project <br />
+                                        Detect fraudulent and non-fraudulent
+                                        transactions from a given dataset that
+                                        was taken from Kaggle
+                                    </p>
+                                    <div class="my-4">
+                                        <button class="btn btn-blue">
+                                            More Info
+                                        </button>
+                                    </div>
+                                    <a
+                                        href="https://github.com/ryanjgani/fraud-detection"
+                                        target="_blank"
+                                        ><i
+                                            class="bx bxl-github"
+                                            style="font-size: 20px"
+                                        ></i>
+                                        Github Link</a
+                                    >
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- <div markdown="1">
+                ## Test heading a paragraph. ## second heading another paragraph
+            </div>
+            <div class="tip" markdown="1">Have **fun!**</div>
+            <div markdown="1">
+                # Fraud Detection **SDSC 2001 Python for Data Science** Final
+                Course Project Taught by Prof. LI Xinyue, City University of
+                Hong Kong Final Course Grade: A+ The goal of this project is to
+                detect fraudulent and non-fraudulent transactions from a given
+                dataset that was taken from Kaggle and manipulated by the
+                Professor. The following files has been posted: - Project
+                instructions `project-instructions.ipynb` - Notebook
+                `fraud-detection.ipynb` - Dataset `creditcard_test.csv
+                creditcard_train.csv` ### Project Information **Language:**
+                Python **Technology:** Pandas, Matplotlib, Seaborn, scikit-learn
+                #### Short Summary There are **5 main modules:** - **Data
+                Exploration** We start by exploring the dataset, handling
+                missing values and outliers. - **Data Visualization** Continue
+                to explore the dataset using visualizations and use them to
+                explain the findings. - **Dimension Reduction** Apply
+                unsupervised learning methods to achieve dimension reduction. We
+                use Principal Component Analysis (PCA) as our dimensionality
+                reduction algorithm. - **Classification** we use the dataset to
+                train different models which are Gaussian NB, Decision Tree
+                Clasifier, and Logistic Regression. We prepared both data for
+                training and testing. For each model, we count the accuracy
+                scores, plot a confusion matrix, and 5-Fold Cross Validation. -
+                **Summary**
+            </div> -->
+            <!-- End Services Section -->
         </main>
+        <!-- End #main -->
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <p class="footer__copy">Made with ❤️ by Ryan Gani &#169; 2022</p>
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+            <div class="container">
+                <h3>Ryan Gani</h3>
+                <p><strong>Reach me out</strong></p>
+                <div class="social-links">
+                    <span
+                        class="tippytool"
+                        data-clipboard-text="ryanjgani@gmail.com"
+                        ><i class="bx bxl-gmail"></i
+                    ></span>
+                    <a href="https://github.com/ryanjgani" class="google-plus"
+                        ><i class="bx bxl-github"></i
+                    ></a>
+                    <a
+                        href="https://www.linkedin.com/in/ryanjgani/"
+                        class="linkedin"
+                        ><i class="bx bxl-linkedin"></i
+                    ></a>
+                </div>
+                <div class="copyright">&copy; Ryan Gani 2022</div>
+            </div>
         </footer>
+        <!-- End Footer -->
 
-        <!--==================== SCROLL TOP ====================-->
+        <div id="preloader"></div>
+        <a
+            href="#"
+            class="back-to-top d-flex align-items-center justify-content-center"
+            ><i class="bx bx-up-arrow-alt"></i
+        ></a>
 
-        <a href="#home" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
-
-        <!--==================== MAIN JS ====================-->
-        <script src="assets\js\main.js"></script>
+        <!-- Vendor JS Files -->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script></script>
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
