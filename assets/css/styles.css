@@ -144,12 +144,19 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+#header {
+    z-index: 997;
+    transition: all 0.5s;
+}
 .navbar-brand {
     font-weight: 600;
 }
 
-nav {
-    background-color: #ffffff;
+.header-transparent {
+    background: transparent;
+}
+.header-scrolled {
+    background: white;
 }
 
 /*--------------------------------------------------------------
@@ -158,15 +165,15 @@ nav {
 #hero {
     width: 100%;
     height: 100vh;
-    background: rgb(223, 223, 223);
+    background: rgb(138, 138, 138);
     background: linear-gradient(
-        25deg,
-        rgba(223, 223, 223, 1) 27%,
-        rgba(255, 255, 255, 1) 66%
+        322deg,
+        rgba(138, 138, 138, 1) 39%,
+        rgba(255, 255, 255, 1) 82%
     );
-    /* background: url("../img/hero-bg.jpg") top right no-repeat; */
     background-size: cover;
     position: relative;
+    top: 0;
 }
 
 #hero:before {
@@ -403,11 +410,21 @@ section {
 }
 .resume .resume-item h5 {
     font-size: 16px;
-    background: #f7f8f9;
+    background: #f1f1f1;
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
     margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.resume .resume-item span {
+    font-size: 16px;
+    background: #ffefba;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 5px;
 }
 .resume .resume-item ul {
     padding-left: 20px;

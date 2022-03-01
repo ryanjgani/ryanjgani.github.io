@@ -42,11 +42,11 @@
     </head>
 
     <body>
-        <!-- ======= Mobile nav toggle button ======= -->
-        <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-        <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
         <!-- ======= Header ======= -->
-        <nav class="navbar navbar-expand-lg sticky-top navbar-light pt-2">
+        <nav
+            id="header"
+            class="navbar navbar-expand-lg fixed-top navbar-light pt-2"
+        >
             <div class="container-sm">
                 <div></div>
                 <button
@@ -86,9 +86,9 @@
             <div class="container" data-aos="zoom-in" data-aos-delay="100">
                 <h1>Ryan Gani</h1>
                 <p class="mb-4">
-                    Software Engineer | Data Analytics | Cloud <br />
+                    Software Engineer | Data Analytics | Cloud Infrastructure<br />
                 </p>
-                <span class="education">Data Engineering @ CityU HK</span>
+                <span class="education d-none d-sm-inline-block">Data Engineering @ CityU HK</span>
                 <div
                     class="mt-5 d-flex flex-row justify-content-center justify-content-lg-start"
                 >
@@ -98,7 +98,7 @@
                             class="tippytool d-flex align-items-center"
                             data-clipboard-text="ryanjgani@gmail.com"
                             ><i class="bx bxl-gmail"></i
-                            ><span class="p-links ms-1">
+                            ><span class="p-links ms-1 d-none d-md-block">
                                 ryanjgani@gmail.com</span
                             ></a
                         >
@@ -108,7 +108,7 @@
                             href="https://github.com/ryanjgani"
                             class="d-flex align-items-center"
                             ><i class="bx bxl-github"></i
-                            ><span class="ms-1 p-links">ryanjgani</span></a
+                            ><span class="ms-1 p-links d-none d-md-block">ryanjgani</span></a
                         >
                     </div>
 
@@ -116,7 +116,7 @@
                         href="https://www.linkedin.com/in/ryanjgani/"
                         class="d-flex align-items-center"
                         ><i class="bx bxl-linkedin"></i
-                        ><span class="p-links ms-1">Ryan Gani</span></a
+                        ><span class="p-links ms-1 d-none d-md-block">Ryan Gani</span></a
                     >
                 </div>
             </div>
@@ -156,12 +156,10 @@
                                     <em>City University of Hong Kong, HK</em>
                                 </p>
                                 <p>
-                                    <span class="fw-bold"
+                                    <span class="fw-bold mb-2"
                                         >Bachelor of Engineering</span
                                     >
-                                    <br />
-                                    School of Data Science<br />
-                                    <br />
+                                    <strong>School of Data Science</strong><br />
                                     Top Scholarship for International Students
                                     Award (2020 - 2024)
                                 </p>
@@ -169,7 +167,7 @@
                         </div>
                         <div class="col-lg-6">
                             <h3 class="resume-title">Experience</h3>
-                            <div class="resume-item">
+                            <div class="resume-item pb-0">
                                 <h4>Software Engineer Intern</h4>
                                 <h5>Jun 2021 - Jan 2022</h5>
                                 <p>
@@ -178,7 +176,15 @@
                                 <p>
                                     Launched the first release of TRAILME TM,
                                     inventory management full stack application
-                                    built for internal use.
+                                    built for internal use. <br>
+                                    <br>
+                                    <span>Tech stack:</span>
+                                    <ul>
+                                        <li>Frontend: HTML/CSS, JavaScript, JQuery, Bootstrap5</li>
+                                        <li>Backend: Node.js, Express</li>
+                                        <li>Database: MongoDB, S3</li>
+                                        <li>Deployment: Serverless, AWS</li>
+                                    </ul>
                                 </p>
                             </div>
                             <h3 class="resume-title">Leadership</h3>
@@ -191,7 +197,7 @@
                                         Hong Kong</em
                                     >
                                 </p>
-                                <p>Youth and Sports Division</p>
+                                <span class="mb-2">Youth and Sports Division</span> <br>
                                 <a
                                     href="https://www.ppihongkong.org/"
                                     target="_blank"
@@ -377,7 +383,6 @@
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
         <script src="assets/vendor/aos/aos.js"></script>
         <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-        <script></script>
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
     </body>
