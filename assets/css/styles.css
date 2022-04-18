@@ -200,7 +200,26 @@ h6 {
 }
 
 #hero .education {
+    border-radius: 5px;
+    /* color: white; */
     background: #ffefba;
+    /* background: rgb(50, 238, 124);
+    background: linear-gradient(
+        107deg,
+        rgba(50, 238, 124, 1) 0%,
+        rgba(57, 111, 246, 1) 100%
+    ); */
+    /* background: #00f260; 
+    background: -webkit-linear-gradient(
+        to right,
+        #0575e6,
+        #00f260
+    ); 
+    background: linear-gradient(
+        to right,
+        #0575e6,
+        #00f260
+    );  */
 
     padding: 5px 15px;
     font-weight: 600;
